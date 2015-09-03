@@ -1,0 +1,24 @@
+imports:
+    - { resource: factories.yml }
+    - { resource: enricher_commands.yml }
+
+services:
+    tpn.email_templates.email_template_enricher:
+        class: TPN\EmailTemplatesComponent\Enricher
+
+    tpn.email_templates.email_template_validator:
+        class: TPN\EmailTemplatesComponent\Validator
+        arguments:
+          - @tpn.email_templates.email_template_validator.cant_be_empty_rule
+          - @tpn.email_templates.email_template_validator.check_allowed_children_rule
+
+    tpn.email_templates.email_template_validator.cant_be_empty_rule:
+        class: TPN\EmailTemplatesComponent\Validator\Rule\CantBeEmpty
+
+    tpn.email_templates.email_template_validator.check_allowed_children_rule:
+        class: TPN\EmailTemplatesComponent\Validator\Rule\CheckAllowedChildren
+
+    tpn.email_templates.email_template.array_converter:
+        class: TPN\EmailTemplatesComponent\ArrayConverter
+        arguments:
+          - @tpn.email_templates.factory.element

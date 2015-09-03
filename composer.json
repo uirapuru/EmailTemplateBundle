@@ -1,0 +1,22 @@
+{
+    "name": "tpn/email-template-bundle",
+    "authors": [
+        {
+            "name": "Grzegorz 'Uirapuru' Kaszuba",
+            "email": "uirapuruadg@gmail.com"
+        }
+    ],
+    "require": {
+        "tpn/email-template-component" : "dev-master",
+        "symfony/symfony" : ">=2.5"
+    },
+    "require-dev":{
+        "phpunit/phpunit": "~4.2",
+        "mockery/mockery": "~0.9",
+        "fabpot/php-cs-fixer": "1.5.*"
+    },
+    "autoload": {
+        "psr-0": { "TPN\\EmailTemplatesBundle": "" }
+    },
+    "target-dir": "TPN/EmailTemplatesBundle"
+}

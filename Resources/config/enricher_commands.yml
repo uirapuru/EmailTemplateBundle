@@ -1,0 +1,26 @@
+services:
+  tpn.client_api_client.command.instructions_remover:
+    class: TPN\ClientApiClientBundle\EmailTemplates\Command\InstructionsRemover
+    tags:
+      - {name: "email_template_enricher_command", index: 1}
+
+  tpn.client_api_client.command.tags_remover:
+    class: TPN\ClientApiClientBundle\EmailTemplates\Command\NotAllowedTagsRemover
+    tags:
+      - {name: "email_template_enricher_command", index: 2}
+
+  tpn.client_api_client.command.variables_includer:
+    class: TPN\ClientApiClientBundle\EmailTemplates\Command\VariablesIncluder
+    calls:
+      - [setTemplateVariables, [%tpn.client_api_client.template_variables%]]
+    tags:
+      - {name: "email_template_enricher_command", index: 3}
+
+  tpn.client_api_client.command.template_extender:
+    class: TPN\ClientApiClientBundle\EmailTemplates\Command\TemplateExtender
+    calls:
+      - [setHeaderTemplate, [%tpn.client_api_client.header%]]
+      - [setFooterTemplate, [%tpn.client_api_client.footer%]]
+      - [setStylesTemplate, [%tpn.client_api_client.styles%]]
+    tags:
+      - {name: "email_template_enricher_command", index: 4}
