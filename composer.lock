@@ -1548,17 +1548,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/uirapuru/EmailTemplateComponent.git",
-                "reference": "b088d254a96e2adf7f37d16ecc9ccd4397dbdc33"
+                "reference": "45e6f058a0957fe6974a898d8acd1f785bfd7fcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uirapuru/EmailTemplateComponent/zipball/b088d254a96e2adf7f37d16ecc9ccd4397dbdc33",
-                "reference": "b088d254a96e2adf7f37d16ecc9ccd4397dbdc33",
+                "url": "https://api.github.com/repos/uirapuru/EmailTemplateComponent/zipball/45e6f058a0957fe6974a898d8acd1f785bfd7fcb",
+                "reference": "45e6f058a0957fe6974a898d8acd1f785bfd7fcb",
                 "shasum": ""
             },
             "require": {
+                "jms/serializer-bundle": "~0.13",
                 "php": ">=5.3.1",
-                "tpn/base-main-bundle": "1.*"
+                "symfony/monolog-bundle": "~2.4",
+                "tpn/base-main-bundle": "1.*",
+                "twig/twig": "~1.0"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "1.5.*",
@@ -1586,7 +1589,7 @@
             "keywords": [
                 "email template"
             ],
-            "time": "2015-09-02 15:34:34"
+            "time": "2015-09-03 10:25:16"
         },
         {
             "name": "twig/twig",

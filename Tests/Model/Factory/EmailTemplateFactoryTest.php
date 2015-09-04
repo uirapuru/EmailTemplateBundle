@@ -4,7 +4,7 @@ namespace TPN\EmailTemplatesBundle\Tests\Model\Factory;
 
 use Mockery as m;
 use TPN\ClientApiClientBundle\EmailTemplates\Validator\ErrorTrace;
-use TPN\ClientApiClientBundle\Model\Factory\EmailTemplateFactory;
+use TPN\EmailTemplatesBundle\Model\Factory\EmailTemplateFactory;
 
 class EmailTemplateFactoryTest extends \PHPUnit_Framework_TestCase
 {

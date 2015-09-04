@@ -22,10 +22,10 @@ class TPNEmailTemplatesExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('tpn.email_templates.template_variables', $config['templates']['email_variables']);
-        $container->setParameter('tpn.email_templates.header', $config['templates']['email_layout']['header']);
-        $container->setParameter('tpn.email_templates.footer', $config['templates']['email_layout']['footer']);
-        $container->setParameter('tpn.email_templates.styles', $config['templates']['email_layout']['styles']);
+        $container->setParameter('tpn.email_templates.template_variables', $config['email_variables']);
+        $container->setParameter('tpn.email_templates.header', $config['email_layout']['header']);
+        $container->setParameter('tpn.email_templates.footer', $config['email_layout']['footer']);
+        $container->setParameter('tpn.email_templates.styles', $config['email_layout']['styles']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

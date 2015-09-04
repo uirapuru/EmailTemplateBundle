@@ -1,11 +1,11 @@
 services:
-    tpn.client_api_client.factory.email_template:
-        class: TPN\ClientApiClientBundle\Model\Factory\EmailTemplateFactory
+    tpn.email_templates.factory.email_template:
+        class: TPN\EmailTemplatesComponent\Model\Factory\EmailTemplateFactory
         arguments:
           - @jms_serializer
           - @tpn.email_template.array_converter
           - @tpn.email_template_validator
           - @logger
 
-    tpn.client_api_client.factory.element:
-        class: TPN\ClientApiClientBundle\EmailTemplates\Element\ElementFactory
+    tpn.email_templates.factory.element:
+        class: TPN\EmailTemplatesComponent\Element\ElementFactory
