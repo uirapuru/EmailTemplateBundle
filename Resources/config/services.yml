@@ -6,7 +6,7 @@ services:
     tpn.email_templates.email_template_enricher:
         class: TPN\EmailTemplatesComponent\Enricher
 
-    tpn.email_templates.email_template_validator:
+    tpn.email_templates.validator:
         class: TPN\EmailTemplatesComponent\Validator
         arguments:
           - @tpn.email_templates.email_template_validator.cant_be_empty_rule
@@ -18,7 +18,7 @@ services:
     tpn.email_templates.email_template_validator.check_allowed_children_rule:
         class: TPN\EmailTemplatesComponent\Validator\Rule\CheckAllowedChildren
 
-    tpn.email_templates.email_template.array_converter:
+    tpn.email_templates.array_converter:
         class: TPN\EmailTemplatesComponent\ArrayConverter
         arguments:
           - @tpn.email_templates.factory.element

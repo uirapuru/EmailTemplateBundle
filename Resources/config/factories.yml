@@ -3,8 +3,8 @@ services:
         class: TPN\EmailTemplatesComponent\Model\Factory\EmailTemplateFactory
         arguments:
           - @jms_serializer
-          - @tpn.email_template.array_converter
-          - @tpn.email_template_validator
+          - @tpn.email_templates.array_converter
+          - @tpn.email_templates.validator
           - @logger
 
     tpn.email_templates.factory.element:

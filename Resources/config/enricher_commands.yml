@@ -19,8 +19,8 @@ services:
   tpn.email_templates.command.template_extender:
     class: TPN\EmailTemplatesComponent\Command\TemplateExtender
     calls:
-      - [setHeaderTemplate, [%tpn.client_api_client.header%]]
-      - [setFooterTemplate, [%tpn.client_api_client.footer%]]
-      - [setStylesTemplate, [%tpn.client_api_client.styles%]]
+      - [setHeaderTemplate, [%tpn.email_templates.header%]]
+      - [setFooterTemplate, [%tpn.email_templates.footer%]]
+      - [setStylesTemplate, [%tpn.email_templates.styles%]]
     tags:
       - {name: "email_template_enricher_command", index: 4}
